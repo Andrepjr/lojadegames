@@ -35,8 +35,6 @@ public class Produtos {
 	@Size(min = 5, max = 255, message = "O idioma deve conter no minimo 5 caracteres e no máximo 255")
 	private String idioma;
 	
-	@NotBlank (message = "A data é obrigatorio")
-	private LocalDate lancamento;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
@@ -82,13 +80,6 @@ public class Produtos {
 		this.idioma = idioma;
 	}
 
-	public LocalDate getLancamento() {
-		return lancamento;
-	}
-
-	public void setLancamento(LocalDate lancamento) {
-		this.lancamento = lancamento;
-	}
 
 	public Categoria getCategoria() {
 		return categoria;
